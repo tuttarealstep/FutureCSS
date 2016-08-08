@@ -1,0 +1,209 @@
+//Buttons
+.button {
+    display: inline-block;
+    font-weight: $_buttons_font_weight;
+    vertical-align: middle;
+    cursor: pointer;
+    text-align: center;
+    touch-action: manipulation;
+    margin-bottom: 0;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    height: 38px;
+    letter-spacing: .1rem;
+    font-family: $_font_family_g;
+    text-decoration: none;
+    @include button_size($_padding_vertical, $_padding_horizontal, $font_size_default, $line_height_default, $_button_radius_default);
+
+
+    &,
+    &:hover,
+    &:focus,
+    &.focus {
+      color: #232323;
+      text-decoration: none;
+    }
+
+    &:active,
+    &.active {
+      outline: 0;
+      background-image: none;
+      @include box-shadow(inset 0 3px 5px rgba(0,0,0,.125));
+    }
+
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+      cursor: not-allowed;
+      @include opacity(.65);
+      @include box-shadow(none);
+    }
+
+}
+
+a.button {
+
+  padding-top: 8px;
+
+  &.disabled,
+  fieldset[disabled] & {
+    pointer-events: none;
+  }
+}
+
+//Button Types
+
+.button-normal
+{
+  @include button-variant(#232323, #ffffff, #bbb);
+}
+
+.button-default
+{
+  @include button-variant($button_default_color, $button_default_bg, $button_default_border);
+}
+
+.button-danger
+{
+  @include button-variant($button_danger_color, $button_danger_bg, $button_danger_border);
+}
+
+.button-success
+{
+  @include button-variant($button_success_color, $button_success_bg, $button_success_border);
+}
+
+.button-info
+{
+  @include button-variant($button_info_color, $button_info_bg, $button_info_border);
+}
+
+.button-warning
+{
+  @include button-variant($button_warning_color, $button_warning_bg, $button_warning_border);
+}
+
+//White buttons
+
+.white-button-default
+{
+  @include button-variant(#232323, #ffffff, $button_default_border);
+}
+
+.white-button-danger
+{
+  @include button-variant(#232323, #ffffff, $button_danger_border);
+}
+
+.white-button-success
+{
+  @include button-variant(#232323, #ffffff, $button_success_border);
+}
+
+.white-button-info
+{
+  @include button-variant(#232323, #ffffff, $button_info_border);
+}
+.white-button-warning
+{
+  @include button-variant(#232323, #ffffff, $button_warning_border);
+}
+
+.button-clear
+{
+    @include button-variant(#ffffff, transparent, transparent);
+}
+
+.white-button-clear
+{
+    @include button-variant(#232323, transparent, transparent);
+}
+//Button size
+
+.button-extra-small {
+  @include button_size($_button_padding_extra_small_vertical, $_button_padding_extra_small_horizontal, 12px, 1.5, 3px);
+  height: 100%;
+}
+
+.button-small {
+  @include button_size($_button_padding_small_vertical, $_button_padding_small_horizontal, 85%, $line_height_default, $_button_radius_default);
+  height: 30px;
+}
+
+.button-large {
+  @include button_size($_button_padding_large_vertical, $_button_padding_large_horizontal, 38px, $line_height_default, $_button_radius_default);
+  height: 52px;
+}
+
+.button-extra-large {
+  @include button_size($_button_padding_extra_large_vertical, $_button_padding_extra_large_horizontal, 52px, 1.2em, $_button_radius_default);
+  height: 62px;
+}
+
+//Full width buttons
+
+.button-block {
+  display: block;
+  width: 100%;
+}
+
+.button-block + .button-block {
+  margin-top: 5px;
+}
+
+.no-radius, .button-square
+{
+  @include border-radius(0);
+}
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  &.button-block {
+    width: 100%;
+  }
+}
+
+.full-height {
+  height: 100%;
+}
+
+.blockquote, blockquote {
+  border-left: .3rem solid $_white;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 1rem 1.5rem;
+}
+
+.blockquote *:last-child, blockquote *:last-child {
+    margin: 0;
+}
+
+.blockquote-red {
+    border-left: .3rem solid $_red;
+}
+
+.blockquote-green {
+    border-left: .3rem solid $_green;
+}
+
+.blockquote-yellow {
+    border-left: .3rem solid $_yellow;
+}
+
+.blockquote-orange {
+    border-left: .3rem solid $_orange;
+}
+
+.blockquote-blue {
+    border-left: .3rem solid $_blue;
+}
+
+.blockquote-black {
+    border-left: .3rem solid $_black;
+}
+
+.code
+{
+
+}
