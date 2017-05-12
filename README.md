@@ -1,4 +1,4 @@
-# [FutureCSS](http://futurecss.ml)
+# [FutureCSS](https://tuttarealstep.github.io/FutureCSS/)
 
 Minimal CSS Framewok.
 
@@ -10,7 +10,7 @@ Minimal CSS Framewok.
 <link rel="stylesheet" href="https://tuttarealstep.github.io/FutureCSS/dist/future.min.css"/>
 ```
 
-## [Documentation](http://futurecss.ml/#documentation) 
+## [Documentation](https://tuttarealstep.github.io/FutureCSS/#documentation) 
 
 
 ## License
